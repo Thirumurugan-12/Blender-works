@@ -1,0 +1,45 @@
+import bpy
+
+bpy.ops.bim.override_paste_buffer()
+bpy.ops.object.editmode_toggle()
+bpy.ops.mesh.extrude_region_move(
+    MESH_OT_extrude_region={
+        "use_normal_flip": False,
+        "use_dissolve_ortho_edges": False,
+        "mirror": False,
+    },
+    TRANSFORM_OT_translate={
+        "value": (0, 0, 9.61467),
+        "orient_type": "GLOBAL",
+        "orient_matrix": ((1, 0, 0), (0, 1, 0), (0, 0, 1)),
+        "orient_matrix_type": "GLOBAL",
+        "constraint_axis": (False, False, True),
+        "mirror": False,
+        "use_proportional_edit": False,
+        "proportional_edit_falloff": "SMOOTH",
+        "proportional_size": 1,
+        "use_proportional_connected": False,
+        "use_proportional_projected": False,
+        "snap": False,
+        "snap_elements": {"INCREMENT"},
+        "use_snap_project": False,
+        "snap_target": "CLOSEST",
+        "use_snap_self": True,
+        "use_snap_edit": True,
+        "use_snap_nonedit": True,
+        "use_snap_selectable": False,
+        "snap_point": (0, 0, 0),
+        "snap_align": False,
+        "snap_normal": (0, 0, 0),
+        "gpencil_strokes": False,
+        "cursor_transform": False,
+        "texture_space": False,
+        "remove_on_cancel": False,
+        "use_duplicated_keyframes": False,
+        "view2d_edge_pan": False,
+        "release_confirm": False,
+        "use_accurate": False,
+        "alt_navigation": True,
+        "use_automerge_and_split": False,
+    },
+)
